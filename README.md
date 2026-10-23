@@ -1,10 +1,6 @@
-<video src="./docs/demo.mp4" controls width="100%"></video>
-
-<video src="./docs/demo.mp4" controls width="100%"></video>
-
 # Gamer Archetype 3D
 
-An interactive 3D personality quiz that identifies your gamer archetype based on your answers. The experience takes place inside a stylized 3D environment with interactive characters, cards, lighting, and game-inspired visuals.
+An interactive 3D personality quiz that identifies your gamer archetype based on your answers. The experience takes place inside a stylized 3D environment with interactive characters, cards, lighting, and quiz logic.
 
 ## Live Demo
 
@@ -12,7 +8,7 @@ An interactive 3D personality quiz that identifies your gamer archetype based on
 
 ## Preview
 
-![Gamer Archetype 3D preview](./image.png)
+<video src="./docs/demo.mp4" controls width="100%"></video>
 
 ## Features
 
@@ -109,6 +105,8 @@ Open the local URL provided by Vite in your browser.
 │   ├── App.css
 │   ├── index.css
 │   └── main.jsx
+├── docs/
+│   └── demo.mp4
 ├── image.png
 ├── index.html
 ├── package.json
