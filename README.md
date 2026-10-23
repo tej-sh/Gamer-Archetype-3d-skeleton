@@ -1,16 +1,161 @@
-# React + Vite
+<video src="./docs/demo.mp4" controls width="100%"></video>
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+<video src="./docs/demo.mp4" controls width="100%"></video>
 
-Currently, two official plugins are available:
+# Gamer Archetype 3D
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+An interactive 3D personality quiz that identifies your gamer archetype based on your answers. The experience takes place inside a stylized 3D environment with interactive characters, cards, lighting, and game-inspired visuals.
 
-## React Compiler
+## Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Open the Gamer Archetype 3D experience](https://tej-sh.github.io/Gamer-Archetype-3d-sekeleton/)
 
-## Expanding the Oxlint configuration
+## Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+![Gamer Archetype 3D preview](./image.png)
+
+## Features
+
+- Interactive 3D quiz experience
+- Four gamer archetypes:
+  - Survivor
+  - Goofball
+  - Predator
+  - Tactician
+- Multiple-choice questions with score-based archetype tracking
+- 3D environment built with React Three Fiber
+- Interactive camera controls
+- GLTF 3D models for characters and environment assets
+- Custom lighting and scene composition
+- Vite-powered development and production builds
+
+## Built With
+
+- React
+- Vite
+- React Three Fiber
+- Three.js
+- `@react-three/drei`
+- Leva
+- JavaScript
+- HTML
+- CSS
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/tej-sh/Gamer-Archetype-3d-sekeleton.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd Gamer-Archetype-3d-sekeleton
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+## Running the Project
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL provided by Vite in your browser.
+
+## Available Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Starts the development server |
+| `npm run build` | Creates a production build |
+| `npm run preview` | Previews the production build locally |
+| `npm run lint` | Runs Oxlint |
+
+## Project Structure
+
+```text
+.
+├── public/
+│   ├── assets/
+│   ├── fonts/
+│   └── models/
+├── src/
+│   ├── quiz/
+│   │   └── quizquestions.json
+│   ├── ActualScene.jsx
+│   ├── App.jsx
+│   ├── Arcade.jsx
+│   ├── Card.jsx
+│   ├── Options.jsx
+│   ├── QuizEngine.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── image.png
+├── index.html
+├── package.json
+├── package-lock.json
+└── vite.config.js
+```
+
+## How It Works
+
+The quiz presents a series of questions with four answer choices. Each answer contributes points to one or more gamer archetypes.
+
+The available archetypes are:
+
+- **Survivor** — adaptable, resilient, and focused on staying alive
+- **Goofball** — playful, unpredictable, and entertaining
+- **Predator** — competitive, aggressive, and goal-oriented
+- **Tactician** — strategic, analytical, and methodical
+
+The quiz engine tracks the selected answers and calculates the archetype scores throughout the experience.
+
+## 3D Scene
+
+The 3D scene includes:
+
+- A basement environment
+- A floor and table
+- Three character models
+- Interactive question and answer cards
+- Orbit camera controls
+- Ambient and spotlight lighting
+- GLTF assets loaded from the `public/models` directory
+
+## Production Build
+
+Create an optimized production build with:
+
+```bash
+npm run build
+```
+
+The generated files will be placed in the `dist` directory.
+
+## Deployment
+
+This project can be deployed to platforms that support Vite applications, including:
+
+- GitHub Pages
+- Vercel
+- Netlify
+- Cloudflare Pages
