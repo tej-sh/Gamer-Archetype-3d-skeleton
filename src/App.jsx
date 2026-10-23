@@ -1,11 +1,13 @@
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef, useEffect } from "react";
+import { Canvas } from "@react-three/fiber";
+import { useRef } from "react";
 import { PerspectiveCamera } from "@react-three/drei";
 import { OrbitControls } from "@react-three/drei";
 import { useGLTF } from "@react-three/drei";
 import "./test.css";
 import { QuizEngine } from "./QuizEngine.jsx";
 import { ActualScene } from "./ActualScene.jsx";
+
+const modelUrl = (file) => `${import.meta.env.BASE_URL}${file.replace(/^\/+/, "")}`;
 
 const LightWithHelper = () => {
   const targetref = useRef();
@@ -26,10 +28,10 @@ const LightWithHelper = () => {
 };
 
 const Background = () => {
-  const basement = useGLTF("/models/basement.glb");
+  const basement = useGLTF(modelUrl("models/basement.glb"));
   return <primitive object={basement.scene} scale={0.4}></primitive>;
 };
-useGLTF.preload("/models/basement.glb");
+useGLTF.preload(modelUrl("models/basement.glb"));
 
 function App() {
   return (
